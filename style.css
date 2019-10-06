@@ -1,0 +1,38 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+.main {
+	margin: 0;
+	padding: 0;
+	width:100%
+	height: 100%;
+}
+.top_row,
+.middle_row {
+	display: flex;
+	width: 100%;
+	margin: 0;
+}
+#top {
+	overflow: hidden;
+}
+#left_img {
+	overflow: hidden;
+}
+.left {
+	overflow: hidden;
+	min-width: 166px;
+	max-height: 70vh;
+}
+.all {
+	overflow: auto;
+	max-height: 70vh;
+}
+#foot_img {
+
+}
+.footer_row {
+	overflow: auto;
+}

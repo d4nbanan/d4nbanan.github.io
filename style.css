@@ -6,33 +6,71 @@ body {
 .main {
 	margin: 0;
 	padding: 0;
-	width:100%
-	height: 100%;
+	width:100vw;
+	height: 100vh;
 }
 .top_row,
 .middle_row {
 	display: flex;
-	width: 100%;
+	width: 100vw;
 	margin: 0;
 }
+.course,
+.course > img,
+#left,
+#left > img {
+	width:10vw;
+}
+.course,
+.course > img,
+.top,
+.top > img {
+	height: 17.2vh;
+}
+#all {
+	width: 90vw;
+	max-height: 90vh;
+	overflow: auto;
+}
+#all > img {
+
+}
+#top_img {
+	height: 17.2vh;
+}
+.top,
 #top {
 	overflow: hidden;
 }
-#left_img {
-	overflow: hidden;
-}
+#left,
 .left {
 	overflow: hidden;
-	min-width: 166px;
-	max-height: 70vh;
-}
-.all {
-	overflow: auto;
-	max-height: 70vh;
-}
-#foot_img {
-
+	max-height: 90vh;
 }
 .footer_row {
 	overflow: auto;
+}
+@media (max-width: 1000px) {
+.course,
+.course > img,
+#left,
+#left > img {
+	min-width:15vw;
+	height: 61.7vh;
+}
+.course,
+.course > img,
+.top,
+#top_img {
+	max-height: 10vh;
+}
+#all,
+#all_img {
+	width: 247vw;
+	max-height: 90vh;
+	overflow: auto;
+}
+#foot_img {
+	height: 25vh;
+}
 }

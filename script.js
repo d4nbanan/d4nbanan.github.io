@@ -6,4 +6,4 @@ midBar.addEventListener("scroll", function(){
 	leftBar.scrollTop = midBar.scrollTop;
 	topBar.scrollLeft = midBar.scrollLeft;
 });
-console.log('sdkmkml');
+getElementById('left').style.height = getElementById('all_img').style.height;

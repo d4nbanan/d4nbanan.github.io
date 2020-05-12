@@ -1,4 +1,24 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<style>
+		.text {
+			width: 20px;
+			height: 20px;
+		}
+	</style>
+	<title>Document</title>
+</head>
+<body>
+	<form action="#">
+		<input id="inp1" type="date">
+		<input class="text" type="text">
+		<input id="inp2" type="date"><br>
+		<input class="button" id="inp3" type="button" value="Рассчитать">
+	</form>
+</body>
+<script>
 days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 document.querySelector('#inp3').onclick = function(){
 	let oper1 = document.querySelector("#inp1").value.split('-');
@@ -49,3 +69,5 @@ document.querySelector('#inp3').onclick = function(){
 	}
 	alert(`${day_res}-${month_res}-${year_res}`);
 }
+</script>
+</html>

@@ -1,51 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<link rel="stylesheet" href="style.css">
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	<div class="menu">
-		<a href="#"><img src="logo.png"></a>
-		<ul type="none">
-			<li><a href='#'>Главная</a></li>
-			<li><a href='#'>О нас</a></li>
-			<li><a href='#'>Контакты</a></li>
-			<li><a href='#'>Отзывы</a></li>
-		</ul>
-	</div>
-	<div class="content">
-		<h1>О КОМПАНИИ</h1>
-		<img src="about_img.png" alt="muzhik.png">
-		<h2>Рекрутинговое агентство Киев "Vasko-personal"</h2>
-		<p>Рекрутинговое агентство в Киеве <span class='vasko'>"Vasko-personal"</span> - один из лидеров в отрасли рекрутинга в Украине, который занимается профессиональным подбором персонала и предоставляет качественные услуги рекрутинга в Киеве и других городах Украины. </p>
 
-		<p>Мы понимаем, что грамотно подобранные трудовые кадры — важная составляющая для построения и развития эффективного бизнеса. "Vasko-personal" работает по новейшим методикам, не так как другие рекрутинговые агентства в Киеве. </p>
-
-		<p><span class='we_know'>Мы знаем</span>, что у <i>руководителей</i> компаний не всегда есть время и навыки, чтобы подобрать подходящую кандидатуру на ту или иную должность, поэтому готовы предоставить вам помощь!</p>
-		<h3>Что мы предлагаем?</h3>
-		<ol>
-			<li>рекрутинг Киев</li>
-			<li>Executive search</li>
-			<li>массовый подбор персонала</li>
-			<li>поиск персонала в регионах Украины</li>
-		</ol>
-		<div class="line"></div>
-		<h2>Кадровое агентство в Киеве "Vasko-personal": наши преимущества</h2>
-		<p>Все услуги рекрутингового агентства Киев "Vasko-personal" выполняются оперативно, качественно и открыто (как по отношению к соискателям, так и работодателям). Если перед вами возникла необходимость найти сотрудника, вы можете быть уверены, что "Vasko-personal" найдет именного того, кто вам нужен. Мы работаем до тех пор, пока открытая вакансия не будет закрыта.</p>
-		<p>Часто на практике можно столкнуться с тем, что многие рекрутинговые компании в Киеве работают по старым стандартам и методикам, нечестно и медленно, и, как результат, клиенты недовольны. "Vasko-personal" — это рекрутинговое агентство, кредо которого - индивидуальный подход к каждому клиенту и нацеленность только на положительный результат.</p>
-		<p><i class='lol'>Кадровое агентство «Персонал» Киев - это сплоченная команда профессионалов, которые готовы в самые кратчайшие сроки сформировать в вашей организации максимально продуктивный персонал!</i></p>
-		<div class="line1"></div>
-	</div>
-		<div class="norm">
-			<h1>НАШ ПОДХОД</h1>
-			<ul class='typ' type="none">
-				<li class='li1'>ЭКОНОМИЯ ВРЕМЕНИ</li>
-				<li class='li2'>ГАРАНТИЯ</li>
-				<li class='li3'>ПРОФЕССИОНАЛИЗМ</li>
-				<li class='li4'>ЭКОНОМИЯ ФИНАНСОВ</li>
-			</ul>
-		</div>
-</body>
-</html>
+days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+document.querySelector('#inp3').onclick = function(){
+	let oper1 = document.querySelector("#inp1").value.split('-');
+	let oper2 = document.querySelector("#inp2").value.split('-');
+	let operation = document.querySelector(".text").value;
+	for(let i=0; i<=2; i++){
+		oper1[i] = parseInt(oper1[i]);
+		oper2[i] = parseInt(oper2[i]);
+	}
+	let day_res = 0;
+	let month_res = 0;
+	let year_res = 0;
+	if(operation == '+'){
+		day_res = oper1[2] + oper2[2];
+		month_res = oper1[1] + oper2[1];
+		year_res = oper1[0] + oper2[0];
+		if(Math.floor(day_res/(days[oper1[1]-1]+1)) != 0){
+			let num_of_added_month = 1;
+			day_res = day_res - days[oper1[1]-1];
+			if(Math.floor(day_res/(days[oper1[1]]+1))){
+				day_res = day_res - days[oper1[1]];
+				num_of_added_month += 1;
+			}
+			month_res += num_of_added_month;
+		}
+		if(Math.floor(month_res/12) != 0){
+			month_res = month_res % 12;
+			year_res += 1;
+		}
+	}
+	if(operation == '-'){
+		day_res = oper1[2] - oper2[2];
+		month_res = oper1[1] - oper2[1];
+		year_res = oper1[0] - oper2[0];
+		if(day_res <= 0){
+			let num_of_taken_month = 1;
+			day_res = days[oper1[1]-2] + day_res;
+			if(day_res <= 0){
+				day_res = days[oper1[1]-3] + day_res;
+				num_of_taken_month += 1;
+			}
+			month_res -= num_of_taken_month;
+		}
+		if(month_res <= 0){
+			month_res = 12 + month_res;
+			year_res -= 1;
+		}
+	}
+	alert(`${day_res}-${month_res}-${year_res}`);
+}

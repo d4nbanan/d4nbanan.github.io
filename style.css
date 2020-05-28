@@ -10,6 +10,7 @@ body {
 a {
 	text-decoration: none;
 	color: #fff;
+	transition: 0.2s;
 }
 header {
 	margin-top: -117px;
@@ -19,23 +20,24 @@ header {
 	display: flex;
 	justify-content: center;
 	position: fixed;
-	z-index: 10;
+	z-index: 12;
 }
 .header {
 	height: 100%;
-	width: 1000px;
+	max-width: 1000px;
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 }
 .logo {
-	margin-left: -15px;
 	height: 100%;
 	display: flex;
 	align-items: center;
 }
 .logo > img {
 	height: 50px;
-	width: 200px;
+	width: 100%;
+	max-width: 200px;
 }
 .navbar {
 	display: flex;
@@ -63,7 +65,8 @@ header {
 	display: flex;
 	justify-content: flex-end;
 	background: #000;
-	width: 730px;
+	max-width: 730px;
+	width: 100%;
 	height: 23px;
 	margin: 5px 5px 16px;
 }
@@ -102,6 +105,7 @@ section {
 .section {
 	max-width: 1000px;
 	display: flex;
+	width: 100%;
 	flex-direction: column;
 	justify-content: center;
 }
@@ -399,7 +403,8 @@ section {
 	justify-content: center;
 }
 .news {
-	width: 480px;
+	max-width: 480px;
+	width: 100%;
 	height: 404px;
 	padding: 0 10px;
 }
@@ -410,27 +415,28 @@ section {
 	position: relative;
 }
 .infoblock_grey h2 {
-	width: 460px;
+	width: 100%;
 	margin: 0 0 10px;
 	padding: 0 10px;
 	border-bottom: 1px solid #fff;
+}
+.infoblock_grey > img {
+	width: 100%;
 }
 .infoblock_grey h2 a {
 	font-family: OpenSans-Bold, sans-serif;
 	font-size: 16px;
 	display: inline-block;
-	width: 460px;
+	width: 100%;
 	color: #000;
 	line-height: 30px;
 }
 .infoblock_grey .text {
-	width: 460px;
+	width: 100%;
 	height: 72px;
 	color: #636667;
 	font-family: OpemSans, sans-serif;
 	font-size: 12;
-	padding: 0 10px;
-	margin: 0 0 5px;
 }
 .free {
 	width: 70px;
@@ -504,7 +510,8 @@ footer {
 	background: #000;
 }
 .footer {
-	width: 980px;
+	max-width: 980px;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -539,7 +546,8 @@ footer {
 }
 .footer_content_big {
 	position: relative;
-	width: 480px;
+	max-width: 480px;
+	width: 100%;
 }
 .world img{
 	position: absolute;
@@ -657,7 +665,261 @@ footer {
 .find_in_input img{
 	right: 20px;
 }
+						/*\/*/
+    				/*\........\*/
+				/*\................\*/
+			/*\........................\*/
+		/*\................................\*/
+	/*\........................................\*/
+/*\..............................................\*/
+/*\Конец главной страницы и основных стилей сайта\*/
+/*\..............................................\*/
+	/*\........................................\*/
+    	/*\................................\*/
+            /*\........................\*/
+				/*\................\*/
+					/*\........\*/
+					    /*\/*/
 
+.title_feedback {
+	height: 32px;
+	background: silver;
+	font-size: 32px;
+	color: #000;
+	display: block;
+	line-height: 32px;
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.burger {
+	width: 50px;
+	height: 50px;
+	position: relative;
+	top: 13px;
+	display: none;
+}
+
+.line {
+	position: absolute;
+	width: 80%;
+	height: 4px;
+	background: #777;
+	left: 10%;
+}
+.line1 {
+	top: 13px;
+}
+.line2 {
+	top: 23px;
+}
+.line3 {
+	top: 33px;
+}
 
 
 
@@ -673,34 +935,76 @@ footer {
 .text16 {
 	font-size: 16px !important;
 }
-
 @media (max-width: 1000px) {
-  	.slider {
+  	.slider,
+  	.size_font,
+  	.inputs,
+  	.footer_content_big {
   		display: none;
+  	}
+  	.burger {
+  		display: block;
+  	}
+  	.links a {
+  		font-size: 26px;
+  		line-height: 32px;
+  	}
+  	.links a:nth-child(2) {
+		background: #222;
+  	}
+  	.links a:nth-child(4) {
+		background: #222;
+  	}
+  	.links a:nth-child(6) {
+		background: #222;
+  	}
+  	.links {
+		transition: 0.5s;
+  	}
+  	.links_hide {
+		flex-direction: column;
+		width: 100vw;
+		overflow: hidden;
+		position: absolute;
+		left: 0;
+		transition: 0.5s;
+		top: 77px;
+		max-height: 0px;
+		opacity: 0;
+  	}
+  	.links_active {
+  		overflow: visible;
+		max-height: 100vh;
+		flex-direction: column;
+		width: 100vw;
+		position: absolute;
+		left: 0;
+		top: 77px;
+		opacity: 1;
   	}
 }
 
 @font-face {
 font-family: "Cuprum-Regular"; 
-src: url("Cuprum-Regular.ttf") format("truetype"); 
+src: url("fonts/Cuprum-Regular.ttf") format("truetype"); 
 font-style: normal; 
 font-weight: normal; 
 }
 @font-face {
 font-family: "OpenSans-Bold"; 
-src: url("OpenSans-Bold.ttf") format("truetype"); 
+src: url("fonts/OpenSans-Bold.ttf") format("truetype"); 
 font-style: normal; 
 font-weight: normal; 
 }
 @font-face {
 font-family: "OpenSans-SemiBold"; 
-src: url("OpenSans-SemiBold.ttf") format("truetype"); 
+src: url("fonts/OpenSans-SemiBold.ttf") format("truetype"); 
 font-style: normal; 
 font-weight: normal; 
 }
 @font-face {
 font-family: "OpenSans-SemiBoldItalic"; 
-src: url("OpenSans-SemiBoldItalic.ttf") format("truetype"); 
+src: url("fonts/OpenSans-SemiBoldItalic.ttf") format("truetype"); 
 font-style: normal; 
 font-weight: normal; 
 }

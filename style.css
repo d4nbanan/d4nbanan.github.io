@@ -986,25 +986,25 @@ footer {
 
 @font-face {
 font-family: "Cuprum-Regular"; 
-src: url("fonts/Cuprum-Regular.ttf") format("truetype"); 
+src: url("Cuprum-Regular.ttf") format("truetype"); 
 font-style: normal; 
 font-weight: normal; 
 }
 @font-face {
 font-family: "OpenSans-Bold"; 
-src: url("fonts/OpenSans-Bold.ttf") format("truetype"); 
+src: url("OpenSans-Bold.ttf") format("truetype"); 
 font-style: normal; 
 font-weight: normal; 
 }
 @font-face {
 font-family: "OpenSans-SemiBold"; 
-src: url("fonts/OpenSans-SemiBold.ttf") format("truetype"); 
+src: url("OpenSans-SemiBold.ttf") format("truetype"); 
 font-style: normal; 
 font-weight: normal; 
 }
 @font-face {
 font-family: "OpenSans-SemiBoldItalic"; 
-src: url("fonts/OpenSans-SemiBoldItalic.ttf") format("truetype"); 
+src: url("OpenSans-SemiBoldItalic.ttf") format("truetype"); 
 font-style: normal; 
 font-weight: normal; 
 }

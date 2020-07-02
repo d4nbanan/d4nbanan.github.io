@@ -24,6 +24,7 @@ header {
 	justify-content: center;
 	position: fixed;
 	z-index: 12;
+	overflow-x: hidden;
 }
 .header {
 	height: 100%;
@@ -105,6 +106,7 @@ section {
 	display: flex;
 	justify-content: center;
 	margin-top: 117px;
+	overflow-x: hidden;
 }
 .section {
 	max-width: 1000px;
@@ -512,6 +514,7 @@ footer {
 	justify-content: center;
 	padding: 10px 0 30px;
 	background: #000;
+	overflow-x: hidden;
 }
 .footer {
 	max-width: 1000px;

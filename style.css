@@ -420,7 +420,7 @@ section {
 .infoblock_grey h2 {
 	width: 100%;
 	max-width: 100%;
-	padding: 0 10px;
+	margin: 10px 0;
 	border-bottom: 1px solid #fff;
 }
 .infoblock_grey > img {

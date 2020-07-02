@@ -935,7 +935,7 @@ footer {
 .text16 {
 	font-size: 16px !important;
 }
-@media (max-width: 420px) {
+@media (max-width: 420px) and (min-height: 760px) {
   	.slider,
   	.size_font,
   	.inputs,

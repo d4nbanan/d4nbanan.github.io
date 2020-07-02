@@ -990,7 +990,7 @@ footer {
 	.links > a {
 		font-size: 16px;
 	}
-	.world {
+	.world img{
   		display: none;
   	}
 }

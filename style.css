@@ -986,7 +986,7 @@ footer {
 		opacity: 1;
   	}
 }
-@media (max-width: 420px) and (orientation: landscape) {
+@media (max-height: 420px) and (orientation: landscape) {
 	.links > a {
 	font-size: 16px;
 	}

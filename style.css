@@ -988,8 +988,11 @@ footer {
 }
 @media (max-height: 420px) and (orientation: landscape) {
 	.links > a {
-	font-size: 16px;
+		font-size: 16px;
 	}
+	.footer_content_big {
+  		display: none;
+  	}
 }
 
 @font-face {

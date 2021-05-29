@@ -75,7 +75,7 @@
 
 	input.onchange = () => {
 	    for(let i=0; i<quests.length; i++){
-		if(quests[i].children[0].innerText.toLowerCase().indexOf(input.value) == -1){
+		if(quests[i].children[0].innerText.toLowerCase().indexOf(input.value.toLowerCase()) == -1){
 		    quests[i].style.display = "none";
 		} else {
 		    quests[i].style.display = "block";

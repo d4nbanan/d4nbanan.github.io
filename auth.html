@@ -13,7 +13,7 @@
   <script src="jsQR.js"></script>
   <script>
     let code;
-    const constraints = { video: { width: { max: 320 } } };
+    const constraints = { video: { width: { max: 320 }, facingMode: (false? "user" : "environment") } };
     var canvas = document.querySelector("canvas");
     var videoTrack;
     let ex;

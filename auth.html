@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas></canvas>
+    <div class="code"></div>
+  </body>
+  <script src="jsQR.js"></script>
+  <script>
+    let code;
+    const constraints = { video: { width: { max: 320 } } };
+    var canvas = document.querySelector("canvas");
+    var videoTrack;
+    let ex;
+    var imageCapture;
+    navigator.mediaDevices
+      .getUserMedia(constraints)
+      .then(imgCreate)
+      .catch((e) => {
+        console.error("getUserMedia() failed: ", e);
+      });
+
+    function imgCreate(mediastream){
+        videoTrack = mediastream.getVideoTracks()[0];
+        imageCapture = new ImageCapture(videoTrack);
+        ex = imageCapture;
+    }
+    
+    function gotMedia(mediastream) {
+      ex
+        .grabFrame()
+        .then(processFrame)
+        .catch((e) => console.error("grabFrame() failed: " + e));
+    }
+
+    function processFrame(imageBitmap) {
+      canvas.width = imageBitmap.width;
+      canvas.height = imageBitmap.height;
+      let ctx = canvas.getContext("2d");
+
+      ctx.drawImage(imageBitmap, 0, 0);
+
+      let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
+      code = jsQR(imgData.data, canvas.width, canvas.height);
+      if (code) {
+        // console.log("Found QR code", code);
+        document.querySelector('.code').innerText = code.data;
+      }
+    }
+
+    setInterval(() => gotMedia(ex), 50);
+  </script>
+</html>
